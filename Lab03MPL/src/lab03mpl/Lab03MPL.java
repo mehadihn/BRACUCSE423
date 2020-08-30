@@ -60,9 +60,9 @@ public class Lab03MPL implements GLEventListener {
          */
 
         //points should be in the same zone
-        //DrawMPL(gl, 10, 10, 60, 50);
-        //DrawMPL(gl, 10, -10, 60, -50);
-        //DrawMPL(gl, 50, -20, 100, -70);
+        DrawMPL(gl, 10, 10, 60, 50);
+        DrawMPL(gl, 10, -10, 60, -50);
+        DrawMPL(gl, 50, -20, 100, -70);
         DrawMPL(gl, -30, -10, -100, -40);
     }
 
@@ -74,8 +74,6 @@ public class Lab03MPL implements GLEventListener {
     public void displayChanged(GLAutoDrawable drawable, boolean modeChanged, boolean deviceChanged) {
         //do nothing
     }
-
-    int dx, dy, b;
 
     private void DrawMPL(GL2 gl, int x1, int y1, int x2, int y2) {
 
@@ -109,12 +107,13 @@ public class Lab03MPL implements GLEventListener {
 
         while (x <= x2) {
             int[] zone0toOriginal = zone0toOriginal(zone, x, y);
-            System.out.println("x' = " + x + " y1' = " + y + " D = " + d + " x = " + zone0toOriginal[0] + " y = " + zone0toOriginal[1]);
+            
+            System.out.println("x' = " + x + " y' = " + y + " D = " + d + " x = " + zone0toOriginal[0] + " y = " + zone0toOriginal[1]);
+            
             gl.glBegin(GL2.GL_POINTS);
-            gl.glVertex2d(x, y);
+            gl.glVertex2d(zone0toOriginal[0], zone0toOriginal[1]);
             gl.glEnd();
 
-            //System.out.println("B");
             x++;
             if (d > 0) {
                 y++;
@@ -128,15 +127,11 @@ public class Lab03MPL implements GLEventListener {
         }
     }
 
-    //y=mx+b
-    private int func(int x, float y) {
-        return (int) (dy * x - y * dx + b * dx);
-    }
 
     int findZone(int x1, int y1, int x2, int y2) {
         int zone = 0;
-        dy = y2 - y1;
-        dx = x2 - x1;
+        int dy = y2 - y1;
+        int dx = x2 - x1;
 
         if (Math.abs(dx) > Math.abs(dy)) {
             if (dx > 0 && dy > 0) {
