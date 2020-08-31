@@ -62,7 +62,6 @@ public class Lab03MPL implements GLEventListener {
         //points should be in the same zone
         DrawMPL(gl, 10, 10, 60, 50);
         DrawMPL(gl, 10, -10, 60, -50);
-        DrawMPL(gl, 50, -20, 100, -70);
         DrawMPL(gl, -30, -10, -100, -40);
     }
 
