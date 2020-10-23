@@ -8,9 +8,7 @@ package lab02ddaline;
 /**
  *
  * CSE423 Lab 02: Line Draw using DDA Algorithm 
- * Name : Mehadi Hassan 
- * ID :17101177 
- * Sec : 05
+ * @author Mehadi Hassan
  *
  */
 import com.jogamp.opengl.GL2;

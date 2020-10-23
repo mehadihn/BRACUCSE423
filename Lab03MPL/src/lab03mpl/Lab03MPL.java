@@ -8,8 +8,7 @@ package lab03mpl;
 /**
  *
  * CSE423 Lab 03: Line Draw using Mid Point Line Algorithm 
- * Name : Mehadi Hassan
- * ID :17101177 Sec : 05
+ * @author Mehadi Hassan
  *
  */
 import com.jogamp.opengl.GL2;

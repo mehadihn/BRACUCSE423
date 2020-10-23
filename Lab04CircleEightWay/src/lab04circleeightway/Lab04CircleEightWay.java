@@ -8,9 +8,7 @@ package lab04circleeightway;
 /**
  *
  * CSE423 Lab 04: Circle Draw using Eight Way Symmetry
- * Name : Mehadi Hassan 
- * ID :17101177 
- * Sec : 05
+ * @author Mehadi Hassan
  *
  */
 import com.jogamp.opengl.GL2;
